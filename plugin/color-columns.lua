@@ -1,1 +1,1 @@
-print('plugin/color-columns.lua is executed!')
+print("adewitt76/color-columns.lua Loaded")
