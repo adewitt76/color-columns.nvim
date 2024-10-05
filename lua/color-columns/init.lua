@@ -6,8 +6,14 @@ function M.setup(opts)
 	local local_position = opts.position or "80,100,120"
 	local key = opts.key_binding or "<leader>uG"
 
-	vim.g.color_column_enabled = true
+	vim.g.color_column_enabled = not opts.disabled_on_start
 	vim.opt.colorcolumn = local_position
+
+	-- vim.opt.highlight("ColorColumn guibg=Red")
+
+	if opts.highlight_color then
+		vim.cmd("highlight ColorColumn guibg = " .. opts.highlight_color)
+	end
 
 	vim.api.nvim_create_autocmd({ "BufEnter", "BufNewFile" }, {
 		callback = function()
