@@ -1,5 +1,8 @@
 # color-columns.nvim
+This plugin sets up colorcolumns to be easily configured and enabled/disabled
+with **which-key**
 
+To install with **Lazy**
 ``` lua
 return {
   "adewitt76/color-columns.nvim",
@@ -12,8 +15,5 @@ return {
   },
 }
 ````
-
-```
-
-```
+Note: all the above optional settings are the defaults.
 
